@@ -14,6 +14,9 @@ public class ModItems {
     public static final RegistryObject<Item> TRUMPITE = ITEMS.register("trumpite",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CRYONITE = ITEMS.register("cryonite",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventbus){
         ITEMS.register(eventbus);
     }
