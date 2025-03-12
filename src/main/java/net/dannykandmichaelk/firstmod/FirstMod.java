@@ -56,6 +56,7 @@ public class FirstMod {
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.RAW_CRYONITE_BLOCK);
+            event.accept(ModItems.SUPER_CHISEL);
         }
 
     }

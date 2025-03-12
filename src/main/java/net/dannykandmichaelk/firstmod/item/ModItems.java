@@ -1,6 +1,7 @@
 package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +17,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_CRYONITE = ITEMS.register("raw_cryonite",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> SUPER_CHISEL = ITEMS.register("super_chisel",
+            () -> new ChiselItem(new Item.Properties().durability(50000)));
 
     public static void register(IEventBus eventbus){
         ITEMS.register(eventbus);
