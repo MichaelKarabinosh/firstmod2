@@ -21,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FirstMod.MOD_ID);
 
     public static final RegistryObject<Block> RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block", () ->
-            new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.CHAIN).explosionResistance(10000f).ignitedByLava().friction(0.9f)));
+            new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.CHAIN).explosionResistance(10000f).ignitedByLava().friction(0.1f)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
