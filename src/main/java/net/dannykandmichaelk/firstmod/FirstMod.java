@@ -1,6 +1,7 @@
 package net.dannykandmichaelk.firstmod;
 
 import com.mojang.logging.LogUtils;
+import net.dannykandmichaelk.firstmod.block.ModBlocks;
 import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,6 +35,7 @@ public class FirstMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -50,8 +52,12 @@ public class FirstMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.TRUMPITE);
-            event.accept(ModItems.CRYONITE);
+            event.accept(ModItems.RAW_CRYONITE);
         }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.RAW_CRYONITE_BLOCK);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

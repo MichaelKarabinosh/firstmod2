@@ -1,4 +1,6 @@
 {
   "item.firstmod.trumpite": "Trumpite",
-  "item.firstmod.cryonite": "Cryonite"
+  "item.firstmod.raw_cryonite": "Raw Cryonite",
+
+  "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite"
 }
