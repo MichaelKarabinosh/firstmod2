@@ -22,7 +22,8 @@ public class ChiselItem extends Item {
             Map.of(Blocks.COBBLESTONE, Blocks.STONE,
                     Blocks.BLUE_ICE, ModBlocks.RAW_CRYONITE_BLOCK.get(),
                     Blocks.DIRT, Blocks.BEDROCK,
-                    Blocks.ANVIL, Blocks.BEACON);
+                    Blocks.ANVIL, Blocks.BEACON,
+                    Blocks.STONE, Blocks.COBBLESTONE);
 
     public ChiselItem(Properties pProps) {
         super(pProps);

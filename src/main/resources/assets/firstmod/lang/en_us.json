@@ -1,7 +1,14 @@
 {
-  "item.firstmod.trumpite": "Trumpite",
+  "item.firstmod.trumpium": "Trumpium",
   "item.firstmod.raw_cryonite": "Raw Cryonite",
   "item.firstmod.super_chisel": "Super Chisel",
+  "item.firstmod.cryonite": "Cryonite",
 
-  "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite"
+  "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite",
+  "block.firstmod.trumpium_block": "Block of Trumpium",
+  "block.firstmod.cryonite_block": "Block of Cryonite",
+  "block.firstmod.cryonite_ore": "Cryonite Ore",
+  "block.firstmod.deepslate_cryonite_ore": "Deepslate Cryonite Ore",
+
+  "creativetab.firstmod.sigma_items": "Sigma Items"
 }

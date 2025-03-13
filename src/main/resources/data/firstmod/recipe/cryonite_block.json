@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "firstmod:raw_cryonite"
+      "item": "firstmod:cryonite"
     }
   },
   "pattern" : [
@@ -14,6 +14,6 @@
 
   "result": {
     "count" : 1,
-    "id" : "firstmod:raw_cryonite_block"
+    "id" : "firstmod:cryonite_block"
   }
 }

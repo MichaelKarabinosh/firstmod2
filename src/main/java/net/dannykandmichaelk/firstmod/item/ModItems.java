@@ -12,14 +12,17 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FirstMod.MOD_ID);
 
 
-    public static final RegistryObject<Item> TRUMPITE = ITEMS.register("trumpite",
+    public static final RegistryObject<Item> TRUMPIUM = ITEMS.register("trumpium",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CRYONITE = ITEMS.register("cryonite",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_CRYONITE = ITEMS.register("raw_cryonite",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SUPER_CHISEL = ITEMS.register("super_chisel",
-            () -> new ChiselItem(new Item.Properties().durability(50000)));
+            () -> new ChiselItem(new Item.Properties().durability(50)));
 
     public static void register(IEventBus eventbus){
         ITEMS.register(eventbus);

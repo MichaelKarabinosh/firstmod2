@@ -7,6 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.DropperBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,7 +24,32 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FirstMod.MOD_ID);
 
     public static final RegistryObject<Block> RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block", () ->
-            new DropExperienceBlock(UniformInt.of(1,1),BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.SLIME_BLOCK).explosionResistance(10000f).ignitedByLava().friction(0.1f)));
+            new Block(BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).ignitedByLava().friction(0.3f)));
+
+
+
+
+    public static final RegistryObject<Block> CRYONITE_BLOCK = registerBlock("cryonite_block", () ->
+                new Block(BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
+
+    public static final RegistryObject<Block> CRYONITE_ORE = registerBlock("cryonite_ore", () ->
+            new DropExperienceBlock(UniformInt.of(1,3),BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
+
+    public static final RegistryObject<Block> DEEPSLATE_CRYONITE_ORE = registerBlock("deepslate_cryonite_ore", () ->
+            new DropExperienceBlock(UniformInt.of(2,5),BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.GILDED_BLACKSTONE).explosionResistance(10000f).ignitedByLava().friction(0.5f)));
+
+
+    public static final RegistryObject<Block> TRUMPIUM_BLOCK = registerBlock("trumpium_block", () ->
+            new Block(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+                            .sound(SoundType.HEAVY_CORE).explosionResistance(10000f)
+            ));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
@@ -39,7 +65,7 @@ public class ModBlocks {
     }
 
 
-    public static void register (IEventBus eventBus)
+    public static void register(IEventBus eventBus)
     {
         BLOCKS.register(eventBus);
     }
