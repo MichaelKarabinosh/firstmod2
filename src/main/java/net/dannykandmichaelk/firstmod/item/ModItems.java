@@ -39,6 +39,9 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem. Type.BOOTS.getDurability(18))));
 
+    public static final RegistryObject<Item> MRDAS_SPAWN_EGG = ITEMS.register("mrdas_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.MRDAS, 0x53524b, 0xdac741, new Item.Properties()));
+
 
 
 

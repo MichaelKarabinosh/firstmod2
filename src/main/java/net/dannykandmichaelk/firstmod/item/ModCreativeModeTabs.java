@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CRYONITE_BLOCK.get());
                         output.accept(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());
                         output.accept(ModBlocks.CRYONITE_ORE.get());
+                        output.accept(ModItems.MRDAS_SPAWN_EGG.get());
 
                     }).build());
 

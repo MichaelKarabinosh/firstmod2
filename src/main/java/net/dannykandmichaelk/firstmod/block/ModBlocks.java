@@ -5,11 +5,9 @@ import net.dannykandmichaelk.firstmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.DropperBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,8 +22,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FirstMod.MOD_ID);
 
     public static final RegistryObject<Block> RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block", () ->
-            new Block(BlockBehaviour.Properties.of().strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).ignitedByLava().friction(0.3f)));
+            new Block(BlockBehaviour.Properties.of().strength(4.5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.POLISHED_TUFF).explosionResistance(10000f).friction(1.9f)));
+
+
 
 
 

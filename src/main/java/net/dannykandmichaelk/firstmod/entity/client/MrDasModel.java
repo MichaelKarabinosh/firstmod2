@@ -22,7 +22,7 @@ public class MrDasModel<T extends MrDasEntity> extends HierarchicalModel<T> {
 
 
         // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "MrDas"), "main");
+        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "mrdas"), "main");
         private final ModelPart body;
         private final ModelPart head;
 
