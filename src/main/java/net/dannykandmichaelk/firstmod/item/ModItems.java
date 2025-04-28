@@ -1,9 +1,11 @@
 package net.dannykandmichaelk.firstmod.item;
 
 import net.dannykandmichaelk.firstmod.FirstMod;
+import net.dannykandmichaelk.firstmod.entity.ModEntities;
 import net.dannykandmichaelk.firstmod.item.custom.ChiselItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +38,8 @@ public class ModItems {
     public static final RegistryObject<Item> CRYONITE_BOOTS = ITEMS.register("cryonite_boots",
             () -> new ArmorItem(ModArmorMaterials.CRYONITE_ARMOR_MATERIAL,ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem. Type.BOOTS.getDurability(18))));
+
+
 
 
 

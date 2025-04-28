@@ -2,8 +2,11 @@ package net.dannykandmichaelk.firstmod;
 
 import com.mojang.logging.LogUtils;
 import net.dannykandmichaelk.firstmod.block.ModBlocks;
+import net.dannykandmichaelk.firstmod.entity.ModEntities;
+import net.dannykandmichaelk.firstmod.entity.client.MrDasRenderer;
 import net.dannykandmichaelk.firstmod.item.ModCreativeModeTabs;
 import net.dannykandmichaelk.firstmod.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,6 +14,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -37,6 +41,7 @@ public class FirstMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
 //        modEventBus.addListener(this::addCreative);
@@ -78,6 +83,7 @@ public class FirstMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.MRDAS.get(), MrDasRenderer::new);
 
         }
     }
