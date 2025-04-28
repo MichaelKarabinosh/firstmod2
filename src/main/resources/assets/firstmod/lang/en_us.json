@@ -3,12 +3,17 @@
   "item.firstmod.raw_cryonite": "Raw Cryonite",
   "item.firstmod.super_chisel": "Super Chisel",
   "item.firstmod.cryonite": "Cryonite",
+  "item.firstmod.cryonite_helmet" : "Cryonite Helmet",
+  "item.firstmod.cryonite_chestplate" : "Cryonite Chestplate",
+  "item.firstmod.cryonite_leggings" : "Cryonite Leggings",
+  "item.firstmod.cryonite_boots" : "Cryonite Boots",
 
   "block.firstmod.raw_cryonite_block": "Block of Raw Cryonite",
   "block.firstmod.trumpium_block": "Block of Trumpium",
   "block.firstmod.cryonite_block": "Block of Cryonite",
   "block.firstmod.cryonite_ore": "Cryonite Ore",
   "block.firstmod.deepslate_cryonite_ore": "Deepslate Cryonite Ore",
+
 
   "creativetab.firstmod.sigma_items": "Sigma Items"
 }

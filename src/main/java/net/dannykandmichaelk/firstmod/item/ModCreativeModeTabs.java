@@ -23,11 +23,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_CRYONITE.get());
                         output.accept(ModItems.SUPER_CHISEL.get());
                         output.accept(ModItems.CRYONITE.get());
+                        output.accept(ModItems.CRYONITE_HELMET.get());
+                        output.accept(ModItems.CRYONITE_CHESTPLATE.get());
+                        output.accept(ModItems.CRYONITE_LEGGINGS.get());
+                        output.accept(ModItems.CRYONITE_BOOTS.get());
                         output.accept(ModBlocks.RAW_CRYONITE_BLOCK.get());
                         output.accept(ModBlocks.TRUMPIUM_BLOCK.get());
                         output.accept(ModBlocks.CRYONITE_BLOCK.get());
                         output.accept(ModBlocks.DEEPSLATE_CRYONITE_ORE.get());
                         output.accept(ModBlocks.CRYONITE_ORE.get());
+
                     }).build());
 
 
