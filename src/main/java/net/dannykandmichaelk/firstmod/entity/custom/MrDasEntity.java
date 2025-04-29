@@ -34,6 +34,7 @@ import java.util.UUID;
 public class MrDasEntity extends Animal implements  NeutralMob {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    public final AnimationState attackAnimationState = new AnimationState();
     private int remainingPersistentAngerTime;
     private UUID persistentAngerTarget;
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
@@ -52,11 +53,11 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0,new FloatGoal(this));
+//        this.goalSelector.addGoal(0,new FloatGoal(this));
 
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 4, true));
+        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 3, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, 1, false, true, this::isAngryAt));
 
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0));
@@ -73,15 +74,16 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 10.0)
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 30.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.25F)
                 .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE, 150.0F)
                 .add(Attributes.ATTACK_DAMAGE,1)
-                .add(Attributes.ATTACK_SPEED,1000)
+                .add(Attributes.ATTACK_SPEED,1000F)
                 .add(Attributes.ATTACK_KNOCKBACK,10)
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER,0)
-                .add(Attributes.STEP_HEIGHT, 1.0)
-                .add(Attributes.FOLLOW_RANGE,1000);
+                .add(Attributes.STEP_HEIGHT, 4.0)
+                .add(Attributes.FOLLOW_RANGE,1000)
+                .add(Attributes.SCALE, 3F);
     }
 
     @Override
@@ -100,7 +102,7 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.WITHER_HURT;
+        return SoundEvents.BONE_BLOCK_BREAK;
     }
 
 
@@ -209,6 +211,7 @@ public class MrDasEntity extends Animal implements  NeutralMob {
 
         if (this.isAngry()) {
             this.lastHurtByPlayerTime = this.tickCount;
+            this.attackAnimationState.startIfStopped(this.tickCount);
         }
 
         super.customServerAiStep();

@@ -4,6 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.dannykandmichaelk.firstmod.FirstMod;
 import net.dannykandmichaelk.firstmod.entity.custom.MrDasEntity;
+import net.minecraft.client.animation.definitions.CamelAnimation;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -185,8 +186,9 @@ public class MrDasModel<T extends MrDasEntity> extends HierarchicalModel<T> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(MrDasAnimations.TRIKE_WALKING, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.animateWalk(MrDasAnimations.TRIKE_WALKING, limbSwing, limbSwingAmount, 1.5f, 1.5f);
         this.animate(entity.idleAnimationState, MrDasAnimations.TRIKE_IDLE, ageInTicks, 1f);
+        this.animate(entity.attackAnimationState, MrDasAnimations.TRIKE_ATTACK, ageInTicks, 1.5f);
     }
 
     @Override
