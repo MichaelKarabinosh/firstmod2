@@ -51,6 +51,8 @@ public class WerewolfEntity extends Animal {
                 .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
+
+
     @Override
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);

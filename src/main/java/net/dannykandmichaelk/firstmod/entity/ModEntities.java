@@ -21,6 +21,8 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<WerewolfEntity>> WEREWOLF =
             ENTITY_TYPES.register("werewolf", () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.CREATURE).sized(1.5f,5f).build("werewolf"));
+
+
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }
